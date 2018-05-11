@@ -293,7 +293,7 @@ var DBJAB_GigGuide =
       "Day": "Wednesday",
       "Venue": "Roe Valley Arts and Cultural Centre",
       "StartTime": "19:30",
-      "EndTime": "10:30"
+      "EndTime": "22:30"
     },
     {
       "Artist": "Rose Room",
@@ -452,31 +452,29 @@ function createGigDetailsOutput(gigsJSONArray, singleVenue) {
     var responseString = "";
 
     var singleVenueText = [
-        "%s will be playing from %s to %s.",
-        "%s will be on from %s to %s.",
-        "%s will be doing their thing from %s to %s."
+        "%s will be playing from %s to %s <s> ",
+        "%s will be on from %s to %s <s>",
+        "%s will be doing their thing from %s to %s <s>"
     ]
 
     var multipleVenueText = [
-        "%s will be playing in %s from %s to %s.",
-        "%s will be in %s from %s to %s.",
-        "%s will be doing their thing at %s from %s to %s."
+        "%s will be playing in %s from %s to %s <s>",
+        "%s will be in %s from %s to %s <s>",
+        "%s will be doing their thing at %s from %s to %s <s>"
     ]
 
     var nextLine;
 
-    if(!singleVenue) {
+    if(singleVenue) {
         for(var i=0; i< gigsJSONArray.length; i++) {
             nextLine = singleVenueText[Math.floor(Math.random() * singleVenueText.length)];  
-            console.log("Using", nextLine);                    
-            responseString.concat(sprintf(nextLine, gigsJSONArray.Artist, gigsJSONArray.StartTime, gigsJSONArray.EndTime));    
+            responseString += sprintf(nextLine, gigsJSONArray[i].Artist, gigsJSONArray[i].StartTime, gigsJSONArray[i].EndTime);    
         }
     }
     else {
         for(var i=0; i< gigsJSONArray.length; i++) {
             nextLine = multipleVenueText[Math.floor(Math.random() * multipleVenueText.length)];    
-            console.log("Using", nextLine);                    
-            responseString.concat(sprintf(nextLine, gigsJSONArray.Artist, gigsJSONArray.Venue, gigsJSONArray.StartTime, gigsJSONArray.EndTime));
+            responseString += sprintf(nextLine, gigsJSONArray[i].Artist, gigsJSONArray[i].Venue, gigsJSONArray[i].StartTime, gigsJSONArray[i].EndTime);
         }
     }        
 
@@ -500,7 +498,7 @@ var handlers = {
     },
     'getWhoIsPlayingWhereAndWhen': function () {
 
-        console.log("Calling getWhoIsPlayingWhereAndWhen");
+        console.log("Calling getWhoIsPlayingWhereAndWhen for ", dbjabDay, "and", dbjabVenue);
 
         var dbjabVenue;
         if(this.event.request.intent.slots.playingWhere.value) {
