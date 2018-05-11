@@ -420,14 +420,19 @@ exports.handler = function(event, context, callback) {
     alexa.execute();
 };
 
-function filterGigsOnDayAndLocations(day, location) {
+function filterGigsOnDayAndLocations(day, location, nightOnly) {
     if(!day) {
         console.log("No valid day detected");
         return [];
     }
 
     var gigsOnRequestedDay = DBJAB_GigGuide.filter((gig) => {
-        if(gig.Day.toUpperCase() == day.toUpperCase()) return true;
+        if(gig.Day.toUpperCase() == day.toUpperCase()) {
+            if(nightOnly) {
+                if(gig.StartTime < "18:00") return false;
+            }
+            return true;
+        }
         return false;
     })
 
@@ -444,6 +449,20 @@ function filterGigsOnDayAndLocations(day, location) {
         return gigsOnRequestedDay;
 }
 
+function convertTime(timeString) {
+    if(timeString.toUpperCase() != "LATE") {
+        var timeArray = timeString.split(":");
+        var convertedTime = timeArray[0]-12;
+        if(timeArray[1] > 0) {
+            convertedTime += ":";
+            convertedTime += timeArray[1].toString();
+        }
+        convertedTime += "P.M."
+        return convertedTime;
+    }
+    else return timeString;
+}
+
 function createGigDetailsOutput(gigsJSONArray, singleVenue) {
 
     console.log("Creating output for", gigsJSONArray.length, "gigs at", singleVenue)
@@ -453,14 +472,12 @@ function createGigDetailsOutput(gigsJSONArray, singleVenue) {
 
     var singleVenueText = [
         "%s will be playing from %s to %s - ",
-        "%s will be on from %s to %s - ",
-        "%s will be doing their thing from %s to %s - "
+        "%s will be on from %s to %s - "
     ]
 
     var multipleVenueText = [
         "%s will be playing in %s from %s to %s - ",
-        "%s will be in %s from %s to %s - ",
-        "%s will be doing their thing at %s from %s to %s - "
+        "%s will be in %s from %s to %s - "
     ]
 
     var nextLine;
@@ -468,13 +485,13 @@ function createGigDetailsOutput(gigsJSONArray, singleVenue) {
     if(singleVenue) {
         for(var i=0; i< gigsJSONArray.length; i++) {
             nextLine = singleVenueText[Math.floor(Math.random() * singleVenueText.length)];  
-            responseString += sprintf(nextLine, gigsJSONArray[i].Artist, gigsJSONArray[i].StartTime, gigsJSONArray[i].EndTime);    
+            responseString += sprintf(nextLine, gigsJSONArray[i].Artist, convertTime(gigsJSONArray[i].StartTime), convertTime(gigsJSONArray[i].EndTime));    
         }
     }
     else {
         for(var i=0; i< gigsJSONArray.length; i++) {
             nextLine = multipleVenueText[Math.floor(Math.random() * multipleVenueText.length)];    
-            responseString += sprintf(nextLine, gigsJSONArray[i].Artist, gigsJSONArray[i].Venue, gigsJSONArray[i].StartTime, gigsJSONArray[i].EndTime);
+            responseString += sprintf(nextLine, gigsJSONArray[i].Artist, gigsJSONArray[i].Venue, convertTime(gigsJSONArray[i].StartTime), convertTime(gigsJSONArray[i].EndTime));
         }
     }        
 
@@ -509,10 +526,12 @@ var handlers = {
         if(this.event.request.intent.slots.playingWhere.value) {
             dbjabVenue = this.event.request.intent.slots.playingWhere.resolutions.resolutionsPerAuthority[0].values[0].value.name.toUpperCase();
         }
-        var dbjabDay = this.event.request.intent.slots.playingWhen.value.toUpperCase();
+        var nightOnly = false;
+        var dbjabDay = this.event.request.intent.slots.playingWhen.resolutions.resolutionsPerAuthority[0].values[0].value.name.toUpperCase()
+        if(this.event.request.intent.slots.playingWhen.value.toUpperCase().includes("NIGHT")) nightOnly = true;
 
         console.log("Calling getWhoIsPlayingWhereAndWhen for day", dbjabDay, "and location", dbjabVenue);
-        var responseData = filterGigsOnDayAndLocations(dbjabDay, dbjabVenue);
+        var responseData = filterGigsOnDayAndLocations(dbjabDay, dbjabVenue, nightOnly);
 
         var outputMessage;
 
