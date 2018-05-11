@@ -11,42 +11,42 @@ var DBJAB_GigGuide =
     {
       "Artist": "Antoinette McAllister Trio",
       "Day": "Friday",
-      "Venue": "Alexander Arms",
+      "Venue": "The Alexander Arms",
       "StartTime": "18:00",
       "EndTime": "20:00"
     },
     {
       "Artist": "Alan McKelvey Trio",
       "Day": "Friday",
-      "Venue": "Alexander Arms",
+      "Venue": "The Alexander Arms",
       "StartTime": "21:00",
       "EndTime": "23:00"
     },
     {
       "Artist": "Limavady Big Band",
       "Day": "Saturday",
-      "Venue": "Alexander Arms",
+      "Venue": "The Alexander Arms",
       "StartTime": "14:00",
       "EndTime": "16:00"
     },
     {
       "Artist": "Martello Jazz Band",
       "Day": "Saturday",
-      "Venue": "Alexander Arms",
+      "Venue": "The Alexander Arms",
       "StartTime": "17:00",
       "EndTime": "19:00"
     },
     {
       "Artist": "The Armstrong Experience",
       "Day": "Saturday",
-      "Venue": "Alexander Arms",
+      "Venue": "The Alexander Arms",
       "StartTime": "22:00",
       "EndTime": "LATE"
     },
     {
       "Artist": "Kenny and Friends",
       "Day": "Sunday",
-      "Venue": "Alexander Arms",
+      "Venue": "The Alexander Arms",
       "StartTime": "16:00",
       "EndTime": "18:00"
     },
@@ -67,14 +67,14 @@ var DBJAB_GigGuide =
     {
       "Artist": "Jazz Lite",
       "Day": "Friday",
-      "Venue": "Limavady Recreation Club",
+      "Venue": "The Limavady Recreation Club",
       "StartTime": "19:00",
       "EndTime": "21:00"
     },
     {
       "Artist": "Kenny and Frankie",
       "Day": "Saturday",
-      "Venue": "Limavady Recreation Club",
+      "Venue": "The Limavady Recreation Club",
       "StartTime": "19:00",
       "EndTime": "21:00"
     },
@@ -88,140 +88,140 @@ var DBJAB_GigGuide =
     {
       "Artist": "Portabello",
       "Day": "Friday",
-      "Venue": "Corner Bar - Back",
+      "Venue": "Corner Bar, Back Bar",
       "StartTime": "23:00",
       "EndTime": "LATE"
     },
     {
       "Artist": "The Catfish Blues Orchestra",
       "Day": "Saturday",
-      "Venue": "Corner Bar - Back",
+      "Venue": "Corner Bar, Back Bar",
       "StartTime": "23:00",
       "EndTime": "LATE"
     },
     {
       "Artist": "Clandestinos",
       "Day": "Sunday",
-      "Venue": "Corner Bar - Back",
+      "Venue": "Corner Bar, Back Bar",
       "StartTime": "22:00",
       "EndTime": "LATE"
     },
     {
       "Artist": "Lonesome Highway Blues Band",
       "Day": "Friday",
-      "Venue": "Corner Bar - Front",
+      "Venue": "Corner Bar, Front Bar",
       "StartTime": "20:00",
       "EndTime": "22:00"
     },
     {
       "Artist": "Hot Tamales",
       "Day": "Saturday",
-      "Venue": "Corner Bar - Front",
+      "Venue": "Corner Bar, Front Bar",
       "StartTime": "18:00",
       "EndTime": "20:00"
     },
     {
       "Artist": "The Electric Vultures",
       "Day": "Saturday",
-      "Venue": "Corner Bar - Front",
+      "Venue": "Corner Bar, Front Bar",
       "StartTime": "22:00",
       "EndTime": "LATE"
     },
     {
       "Artist": "High Heel Converse",
       "Day": "Sunday",
-      "Venue": "Corner Bar - Front",
+      "Venue": "Corner Bar, Front Bar",
       "StartTime": "14:00",
       "EndTime": "16:00"
     },
     {
       "Artist": "The Soul Doctors",
       "Day": "Saturday",
-      "Venue": "Crown Bar",
+      "Venue": "The Crown Bar",
       "StartTime": "16:00",
       "EndTime": "18:00"
     },
     {
       "Artist": "Daylight Wobblies",
       "Day": "Sunday",
-      "Venue": "Crown Bar",
+      "Venue": "The Crown Bar",
       "StartTime": "18:00",
       "EndTime": "20:00"
     },
     {
       "Artist": "Clara Rose Band",
       "Day": "Friday",
-      "Venue": "Douglas' Bar",
+      "Venue": "Douglas's Bar",
       "StartTime": "21:00",
       "EndTime": "23:00"
     },
     {
       "Artist": "Blackbird and Crow",
       "Day": "Saturday",
-      "Venue": "Douglas' Bar",
+      "Venue": "Douglas's Bar",
       "StartTime": "18:00",
       "EndTime": "20:00"
     },
     {
       "Artist": "The Willie Byrne Band",
       "Day": "Saturday",
-      "Venue": "Douglas' Bar",
+      "Venue": "Douglas's Bar",
       "StartTime": "22:00",
       "EndTime": "LATE"
     },
     {
       "Artist": "The Jambons",
       "Day": "Sunday",
-      "Venue": "Douglas' Bar",
+      "Venue": "Douglas's Bar",
       "StartTime": "15:00",
       "EndTime": "17:00"
     },
     {
       "Artist": "Grand Camaros",
       "Day": "Sunday",
-      "Venue": "Douglas' Bar",
+      "Venue": "Douglas's Bar",
       "StartTime": "21:00",
       "EndTime": "23:00"
     },
     {
       "Artist": "Susan Tomelty Band",
       "Day": "Friday",
-      "Venue": "Frank Owens : Yard",
+      "Venue": "Frank Owens, The Yard",
       "StartTime": "19:00",
       "EndTime": "21:00"
     },
     {
       "Artist": "The Catfish Blues Orchestra",
       "Day": "Friday",
-      "Venue": "Frank Owens : Yard",
+      "Venue": "Frank Owens, The Yard",
       "StartTime": "11:00",
       "EndTime": "LATE"
     },
     {
       "Artist": "Rose Room",
       "Day": "Saturday",
-      "Venue": "Frank Owens : Yard",
+      "Venue": "Frank Owens, The Yard",
       "StartTime": "14:00",
       "EndTime": "16:00"
     },
     {
       "Artist": "Modern Swing Collective",
       "Day": "Saturday",
-      "Venue": "Frank Owens : Yard",
+      "Venue": "Frank Owens, The Yard",
       "StartTime": "18:00",
       "EndTime": "20:00"
     },
     {
       "Artist": "Clandestinos",
       "Day": "Saturday",
-      "Venue": "Frank Owens : Yard",
+      "Venue": "Frank Owens, The Yard",
       "StartTime": "22:00",
       "EndTime": "LATE"
     },
     {
       "Artist": "Men n Black",
       "Day": "Sunday",
-      "Venue": "Frank Owens : Yard",
+      "Venue": "Frank Owens, The Yard",
       "StartTime": "14:00",
       "EndTime": "16:00"
     },
@@ -256,14 +256,14 @@ var DBJAB_GigGuide =
     {
       "Artist": "Eilidh Patterson",
       "Day": "Sunday",
-      "Venue": "Keady Clachan",
+      "Venue": "The Keady Clachan",
       "StartTime": "15:00",
       "EndTime": "17:00"
     },
     {
       "Artist": "Hooker",
       "Day": "Saturday",
-      "Venue": "L.C.D.I.",
+      "Venue": "The L.C.D.I.",
       "StartTime": "14:00",
       "EndTime": "16:00"
     },
@@ -326,42 +326,42 @@ var DBJAB_GigGuide =
     {
       "Artist": "Espresso Jazz",
       "Day": "Friday",
-      "Venue": "The Depot - Bar",
+      "Venue": "The Depot Bar",
       "StartTime": "20:00",
       "EndTime": "22:00"
     },
     {
       "Artist": "Fiona Scott Trotter Band",
       "Day": "Saturday",
-      "Venue": "The Depot - Bar",
+      "Venue": "The Depot Bar",
       "StartTime": "20:00",
       "EndTime": "22:00"
     },
     {
       "Artist": "Mark Braidner Band",
       "Day": "Friday",
-      "Venue": "The Depot - Venue",
+      "Venue": "The Depot, Upstairs Venue",
       "StartTime": "22:00",
       "EndTime": "LATE"
     },
     {
       "Artist": "Soulseekers",
       "Day": "Saturday",
-      "Venue": "The Depot - Venue",
+      "Venue": "The Depot, Upstairs Venue",
       "StartTime": "11:00",
       "EndTime": "LATE"
     },
     {
       "Artist": "Tony Villiers and The Villains",
       "Day": "Sunday",
-      "Venue": "The Depot - Venue",
+      "Venue": "The Depot, Upstairs Venue",
       "StartTime": "17:00",
       "EndTime": "19:00"
     },
     {
       "Artist": "Ronnie Greer",
       "Day": "Thursday",
-      "Venue": "The Depot - Venue",
+      "Venue": "The Depot, Upstairs Venue",
       "StartTime": "22:00",
       "EndTime": "LATE"
     },
@@ -452,15 +452,15 @@ function createGigDetailsOutput(gigsJSONArray, singleVenue) {
     var responseString = "";
 
     var singleVenueText = [
-        "%s will be playing from %s to %s <s> ",
-        "%s will be on from %s to %s <s>",
-        "%s will be doing their thing from %s to %s <s>"
+        "%s will be playing from %s to %s - ",
+        "%s will be on from %s to %s - ",
+        "%s will be doing their thing from %s to %s - "
     ]
 
     var multipleVenueText = [
-        "%s will be playing in %s from %s to %s <s>",
-        "%s will be in %s from %s to %s <s>",
-        "%s will be doing their thing at %s from %s to %s <s>"
+        "%s will be playing in %s from %s to %s - ",
+        "%s will be in %s from %s to %s - ",
+        "%s will be doing their thing at %s from %s to %s - "
     ]
 
     var nextLine;
@@ -498,7 +498,12 @@ var handlers = {
     },
     'getWhoIsPlayingWhereAndWhen': function () {
 
-        console.log("Calling getWhoIsPlayingWhereAndWhen for ", dbjabDay, "and", dbjabVenue);
+        console.log("Calling getWhoIsPlayingWhereAndWhen for ", this.event.request.intent.slots.playingWhen.value, "and", this.event.request.intent.slots.playingWhere.value);
+
+        if(!this.event.request.intent.slots.playingWhen.value) {
+            this.emit(':tellWithCard', this.t("HELP_REPROMPT"))
+            return;
+        }
 
         var dbjabVenue;
         if(this.event.request.intent.slots.playingWhere.value) {
